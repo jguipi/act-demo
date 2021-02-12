@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: PPMS workflow POC
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master, main ]
+    paths:
+      - '.github/workflows/main.yaml'
+      - 'actions/main.yaml'
+
+jobs:
+  PPMS_POC:
+    runs-on: ubuntu-latest
+    name: Run Ansible
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Create a file
+      run: |
+        echo "---STARTING DEMOC---"
+
+    - name: Create a file
+      run: |
+        touch test.txt
+        echo "---ENDING POC---"
