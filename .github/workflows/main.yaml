@@ -18,10 +18,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Create a file
+    - name: Display message
       run: |
         echo "---STARTING DEMOC---"
 
-    - name: Create a file
+    - name: Display last
       run: |
         echo "---ENDING POC---"
