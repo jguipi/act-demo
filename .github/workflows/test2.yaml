@@ -24,4 +24,5 @@ jobs:
 
     - name: Create a file
       run: |
+        echo ${{ secrets.SECRET_VARIABLE }}
         echo "---ENDING POC---"
